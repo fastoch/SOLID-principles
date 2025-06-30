@@ -70,15 +70,39 @@ console.log(coffee.cost()); // Output: 2.7
 ```
 Here, BasicCoffee remains closed to modification, while decorators extend its behavior.
 
-### What is Dependency Injection?
-
-
-
 ## Extension Methods
 
-Another great option is to use Extension Methods.
+Another great option is to use Extension Methods.  
+An extension method allows us to add a method to an existing class without actually having to change the file where our class is defined.    
 
+Provided that you have the **namespace** for your extension **imported**, you can then use the method in the same way you would do  
+if that method was part of the original class.  
+
+The only **downside** of using extension methods is that, unlike the decorator pattern, you can't switch at runtime when this code is used.  
 
 # Liskov substitution principle
 
+A child class should be able to do everything that the parent class can.  
 
+# Interface segregation principle
+
+Interfaces provide a contract that your classes need to implement.  
+If you have particularly bulky interfaces, then you classes have to implement methods they might not end up using.  
+
+To overcome this, you can split the methods into different interfaces.  
+For example, one interface for writing, one for reading, and one for deleting.  
+
+When you do need to use of all of the different methods, you can always create a main interface that inherits from all the others.  
+
+This way, you only need to implement the methods you're actually going to use.  
+
+# Dependency inversion principle
+
+The Dependency Inversion Principle ensures that both high-level and low-level components depend on shared **abstractions**, not on each other directly.   
+This inversion of traditional dependency direction leads to more modular, maintainable, and adaptable software systems.
+
+## How to Apply DIP? 
+
+- Program to **interfaces**, not implementations.
+- Use **dependency injection** to supply dependencies from the outside, rather than instantiating them directly inside classes
+- Avoid direct references to concrete classes in high-level modules
