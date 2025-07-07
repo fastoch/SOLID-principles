@@ -75,10 +75,9 @@ Here, BasicCoffee remains closed to modification, while decorators extend its be
 Another great option is to use Extension Methods.  
 An extension method allows us to add a method to an existing class without actually having to change the file where our class is defined.    
 
-Provided that you have the **namespace** for your extension **imported**, you can then use the method in the same way you would do  
-if that method was part of the original class.  
+Provided that you have the **namespace** for your extension **imported**, you can then use the method in the same way you would do if that method was part of the original class.  
 
-The only **downside** of using extension methods is that, unlike the decorator pattern, you can't switch at runtime when this code is used.  
+The only **downside** of using extension methods is that, unlike the decorator pattern, you cannot switch at runtime which method is used.  
 
 # Liskov substitution principle
 
